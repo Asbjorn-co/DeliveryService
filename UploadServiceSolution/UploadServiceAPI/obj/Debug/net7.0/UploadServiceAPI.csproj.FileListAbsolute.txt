@@ -64,3 +64,4 @@ C:\Users\jakob\Documents\Projekter\DeliveryService\UploadServiceSolution\UploadS
 C:\Users\jakob\Documents\Projekter\DeliveryService\UploadServiceSolution\UploadServiceAPI\obj\Debug\net7.0\UploadServiceAPI.pdb
 C:\Users\jakob\Documents\Projekter\DeliveryService\UploadServiceSolution\UploadServiceAPI\obj\Debug\net7.0\UploadServiceAPI.genruntimeconfig.cache
 C:\Users\jakob\Documents\Projekter\DeliveryService\UploadServiceSolution\UploadServiceAPI\obj\Debug\net7.0\ref\UploadServiceAPI.dll
+C:\Users\jakob\Documents\Projekter\DeliveryService\UploadServiceSolution\UploadServiceAPI\bin\Debug\net7.0\RabbitMQ.Client.dll
