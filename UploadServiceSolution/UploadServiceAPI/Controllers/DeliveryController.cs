@@ -5,6 +5,8 @@ using RabbitMQ.Client;
 using System;
 using System.Text.Json;
 using System.Threading.Tasks;
+using System.IO;
+using System.Text;
 
 namespace UploadServiceAPI.Controllers;
 
@@ -64,6 +66,45 @@ public class DeliveryController : ControllerBase
             return StatusCode(500, "Internal Server Error");
         }
     }
+    [HttpGet("readcsv")]
+    public IActionResult ReadCsv()
+    {
+        string filePath = "..\\csvtest.csv"; // Indsæt stien til din CSV-fil her
+        List<Delivery> deliveries = new List<Delivery>();
 
+        try
+        {
+            using (var reader = new StreamReader(filePath, Encoding.UTF8))
+            {
+                while (!reader.EndOfStream)
+                {
+                    var line = reader.ReadLine();
+                    var values = line.Split(',');
 
+                    // Antager at din CSV-fil har kolonner for Navn og Alder
+                    var delivery = new Delivery
+                    {
+                        medlemsNavn = values[0],
+                        pickupAdresse = values[1],
+                        pakkeID = values[2],
+                        afleveringsAdresse = values[3]
+                    };
+
+                    deliveries.Add(delivery);
+                }
+            }
+
+            return Ok(deliveries);
+        }
+        catch (Exception ex)
+        {
+            // Log any exceptions that occur during processing.
+            _logger.LogError(ex, "Error occurred while READING the CSV-file.");
+
+            // Return an appropriate error response.
+            return StatusCode(500, "Internal Server Error");
+        }
+    }
 }
+
+
