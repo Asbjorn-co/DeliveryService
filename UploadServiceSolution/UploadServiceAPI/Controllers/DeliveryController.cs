@@ -122,12 +122,15 @@ public class DeliveryController : ControllerBase
             var ips = await System.Net.Dns.GetHostAddressesAsync(hostName);
             var ipa = ips.First().MapToIPv4().ToString();
             properties.Add("hosted-at-address", ipa);
+
+             _logger.LogInformation("Metoden version er kaldt");
         }
         catch (Exception ex)
         {
             _logger.LogError(ex.Message);
             properties.Add("hosted-at-address", "Could not resolve IP-address");
         }
+        
         return properties;
     }
 }
