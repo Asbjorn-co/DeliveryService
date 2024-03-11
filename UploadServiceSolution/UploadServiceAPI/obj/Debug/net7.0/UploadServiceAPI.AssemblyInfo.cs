@@ -13,10 +13,10 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Habla Si#")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyCopyrightAttribute("Gyldendal Forlag")]
-[assembly: System.Reflection.AssemblyDescriptionAttribute("\n    1.0.0 Updated with semantic versioning\n    0.9.0 Dockerfile Service Added to" +
-    " App\n    ")]
+[assembly: System.Reflection.AssemblyDescriptionAttribute("\n    1.0.1 Updated patch with git flow\n    1.0.0 Updated with semantic versioning" +
+    "\n    0.9.0 Dockerfile Service Added to App\n    ")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.1.1")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.1")]
 [assembly: System.Reflection.AssemblyProductAttribute("UploadServiceAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UploadServiceAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.1.1")]
