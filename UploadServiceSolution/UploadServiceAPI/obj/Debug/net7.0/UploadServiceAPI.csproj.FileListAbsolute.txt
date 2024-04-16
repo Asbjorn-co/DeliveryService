@@ -99,3 +99,7 @@ C:/Users/jakob/Documents/Projekter/DeliveryService/UploadServiceSolution/UploadS
 /Users/chilinhm/Desktop/HaaV/DeliveryService/UploadServiceSolution/UploadServiceAPI/obj/Debug/net7.0/UploadServiceAPI.pdb
 /Users/chilinhm/Desktop/HaaV/DeliveryService/UploadServiceSolution/UploadServiceAPI/obj/Debug/net7.0/UploadServiceAPI.genruntimeconfig.cache
 /Users/chilinhm/Desktop/HaaV/DeliveryService/UploadServiceSolution/UploadServiceAPI/obj/Debug/net7.0/ref/UploadServiceAPI.dll
+/Users/chilinhm/Desktop/HaaV/DeliveryService/UploadServiceSolution/UploadServiceAPI/bin/Debug/net7.0/System.Net.Http.Formatting.dll
+/Users/chilinhm/Desktop/HaaV/DeliveryService/UploadServiceSolution/UploadServiceAPI/bin/Debug/net7.0/MongoDB.Bson.dll
+/Users/chilinhm/Desktop/HaaV/DeliveryService/UploadServiceSolution/UploadServiceAPI/bin/Debug/net7.0/Newtonsoft.Json.dll
+/Users/chilinhm/Desktop/HaaV/DeliveryService/UploadServiceSolution/UploadServiceAPI/bin/Debug/net7.0/Newtonsoft.Json.Bson.dll
