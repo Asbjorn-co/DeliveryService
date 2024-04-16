@@ -30,11 +30,11 @@ public class DeliveryController : ControllerBase
     {
         try
         {
-            var factory = new ConnectionFactory() { HostName = "localhost" };
+            var factory = new ConnectionFactory() { HostName = "rabbitmq" };
             using (var connection = factory.CreateConnection())
             using (var channel = connection.CreateModel())
             {
-                channel.QueueDeclare(queue: "deliveryqueue",
+                channel.QueueDeclare(queue: "delivery",
                 durable: false,
                 exclusive: false,
                 autoDelete: false,
@@ -42,7 +42,7 @@ public class DeliveryController : ControllerBase
                 //Serializing af JSON-objekt
                 var body = JsonSerializer.SerializeToUtf8Bytes(delivery);
                 channel.BasicPublish(exchange: "",
-                routingKey: "deliveryqueue",
+                routingKey: "delivery",
                 basicProperties: null,
                 body: body);
             }
@@ -69,7 +69,7 @@ public class DeliveryController : ControllerBase
     [HttpGet("readcsv")]
     public IActionResult ReadCsv()
     {
-        string filePath = "..\\csvtest.csv"; // Indsæt stien til din CSV-fil her
+        string filePath = "deliveries.csv"; // Indsæt stien til din CSV-fil her
         List<Delivery> deliveries = new List<Delivery>();
 
         try
@@ -86,7 +86,7 @@ public class DeliveryController : ControllerBase
                     {
                         medlemsNavn = values[0],
                         pickupAdresse = values[1],
-                        pakkeID = values[2],
+                        pakkeID = int.Parse(values[2]),
                         afleveringsAdresse = values[3]
                     };
 
