@@ -16,7 +16,7 @@ namespace UploadServiceAPI
         public WorkerClient(HttpClient httpClient, ILogger<WorkerClient> logger)
         {
             _httpClient = httpClient;
-            _httpClient.BaseAddress = new Uri("http://localhost:5001"); // Angiv basen for din Worker-service URL
+            _httpClient.BaseAddress = new Uri("http://planning-service:80"); // Angiv basen for din Worker-service URL
             _logger = logger;
         }
 

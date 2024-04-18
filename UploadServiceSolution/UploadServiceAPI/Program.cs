@@ -14,7 +14,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddHttpClient<IWorkerClient, WorkerClient>(client =>
 {
-    client.BaseAddress = new Uri("https://localhost:5001"); // Dette skal være din Worker Service's HTTPS-port
+    client.BaseAddress = new Uri("https://planning-service:80"); // Dette skal være din Worker Service's HTTPS-port
 }).ConfigurePrimaryHttpMessageHandler(() => new HttpClientHandler
 {
     ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator // Brug kun i udviklingsmiljøer

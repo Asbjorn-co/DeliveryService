@@ -11,7 +11,7 @@ using System.Text;
 namespace UploadServiceAPI.Controllers;
 
 [ApiController]
-[Route("[controller]")]
+[Route("api/[controller]")]
 public class DeliveryController : ControllerBase
 {
     private string _sendPath = string.Empty;
@@ -30,7 +30,7 @@ public class DeliveryController : ControllerBase
     {
         try
         {
-            var factory = new ConnectionFactory() { HostName = "localhost" };
+            var factory = new ConnectionFactory() { HostName = "rabbitmq" };
             using (var connection = factory.CreateConnection())
             using (var channel = connection.CreateModel())
             {
